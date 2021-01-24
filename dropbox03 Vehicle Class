@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dropbox03
+{
+    class Vehicle
+    {
+        //properties
+        public int XPosition { get; set; }
+        public int YPosition { get; set; }
+        public char VehicleSymbol { get; set; }
+        public ConsoleColor VehicleColor { get; set; }
+        public int Speed { get; set; }
+
+        //constructor
+        public Vehicle(int xPosition, int yPosition, char vehicleSymbol, ConsoleColor vehicleColor, int speed)
+        {
+            XPosition = xPosition;
+            YPosition = yPosition;
+            VehicleSymbol = vehicleSymbol;
+            VehicleColor = vehicleColor;
+            Speed = speed;
+
+        }
+
+        public void MoveLeft()
+        {
+            //Moves vehicle left by subracting one from x position
+            XPosition--;
+        }
+        public void MoveRight()
+        {
+            //Moves vehicle right by adding one to x position
+            XPosition++;
+        }
+        public void Accelerate()
+        {
+            //increase rate that y position changes
+            Speed += 10;
+        }
+        public void Brake()
+        {
+            //decrease rate that y position changes
+            Speed -= 10;
+        }
+    }
+}
